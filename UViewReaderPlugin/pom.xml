@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="
+           http://maven.apache.org/POM/4.0.0 
+           http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.yuran</groupId>
+    <artifactId>uview-reader-plugin</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>UViewReaderPlugin</name>
+    <description>A SCIFIO plugin for UKSOFT2000/UView format</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- SCIFIO dependency -->
+        <dependency>
+            <groupId>io.scif</groupId>
+            <artifactId>scifio</artifactId>
+            <version>0.45.0</version>
+            <!-- <scope>provided</scope> -->
+        </dependency>
+
+        <!-- ImageJ dependency -->
+        <dependency>
+            <groupId>net.imagej</groupId>
+            <artifactId>imagej</artifactId>
+            <version>2.14.0</version>
+            <!-- <scope>provided</scope> -->
+        </dependency>
+
+        <!-- SciJava Common dependency -->
+        <dependency>
+            <groupId>org.scijava</groupId>
+            <artifactId>scijava-common</artifactId>
+            <version>2.94.2</version>
+            <!-- <scope>provided</scope> -->
+        </dependency>
+
+        <!-- Additional dependencies if needed -->
+    </dependencies>
+
+    <!-- Remove the Maven Shade Plugin -->
+    <build>
+        <plugins>
+            <!-- Comment out or remove the Maven Shade Plugin if present -->
+        </plugins>
+    </build>
+
+    <repositories>
+        <!-- ImageJ Maven repository -->
+        <repository>
+            <id>imagej.public</id>
+            <url>https://maven.scijava.org/content/groups/public</url>
+        </repository>
+    </repositories>
+</project>
